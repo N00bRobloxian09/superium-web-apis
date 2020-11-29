@@ -58,6 +58,7 @@ User APIs
 #### Trade action
 * https://superium.net/api/TradeAction
 > id: a target trade id
+
 > action: an action (accept, decline)
 
 ##### Errors
@@ -74,6 +75,7 @@ Avatar APIs
 #### Set body part color
 * https://superium.net/api/SetPartColor?color=[id]&part=[part]
 > id: a color id 
+
 > part: part=currentlySelected (which is Head), part=(body part name)
 
 #### Take off an item
@@ -87,6 +89,7 @@ Avatar APIs
 #### Fetch inventory
 * https://superium.net/api/fetch/wardrobe?cat=[inventoryType]&page=[page]
 > cat: tool, hat, face, shirt, pants
+
 > page: a page id
 
 #### Load worn items 
@@ -102,6 +105,7 @@ Friendship APIs
 #### Send a Friend Request
 * https://superium.net/api/AddFriend
 > id: a target user id
+
 > csrf: your csrf token
 
 #### Unfriend a user (Target needs to be your friend)
@@ -134,7 +138,9 @@ Guild APIs
 #### Get members
 * https://superium.net/api/fetch/guildmembers?gid=[guildId]&role=[role]&page=[page]
 > guildId: a guild id
+
 > role: a role name (can get the id thru F12, and searching for data-roleid)
+
 > page: a page id, currentPage
 
 ```html
@@ -151,6 +157,7 @@ Guild APIs
 #### Get Store Items
 * https://superium.net/api/fetch/guildstore?gid=[guildId]&page=[page]
 > guildId: a guild id
+
 > page: a page id, currentPage
 
 ```html
@@ -183,7 +190,9 @@ Item APIs
 #### Sell an Limited
 * https://superium.net/api/doSellLimited
 > serial: your serial id
+
 > itemid: limited id
+
 > price: chosen price in bricks (max 1000000000, min 1)
 
 ##### Errors
@@ -192,6 +201,7 @@ Item APIs
 #### Purchase an item
 * https://superium.net/api/PurchaseItem
 > id: item id
+
 > csrf: your csrf token
 
 ##### Errors
@@ -206,7 +216,12 @@ Item APIs
 #### Purcahse an limited (requires blim)
 * https://superium.net/api/PurchaseCollectible
 > id: blim
-> blim = var blim = [itemid];
+
+> blim = code below
+```js
+var blim = [itemid];
+```
+
 > csrf: your csrf token
 
 ##### Errors
@@ -221,6 +236,7 @@ Item APIs
 #### Purcahse an limited with id
 * https://superium.net/api/PurchaseCollectible
 > id: item id
+
 > csrf: your csrf token
 
 ##### Errors
@@ -252,9 +268,13 @@ Auth APIs
 #### Register a new account
 * https://superium.net/api/finishregistration
 > username: chosen username
+
 > password: chosen passowrd
+
 > confirmpassword: your chosen password
+
 > email: chosen email
+
 > referer: target userId (REFERER IS OPTIONAL), default 0
 
 ```json
