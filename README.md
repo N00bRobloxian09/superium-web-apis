@@ -18,7 +18,7 @@ User APIs
 ---------
 #### Sends an verification email
 * https://superium.net/api/send_verification_email?ReturnUrl=/[page_name]
-ReturnUrl: a page to redirect to after sending the request
+> ReturnUrl: a page to redirect to after sending the request
 
 #### Switches between the dark/light theme
 * https://superium.net/api/ToggleDarkTheme
@@ -61,6 +61,9 @@ ReturnUrl: a page to redirect to after sending the request
 ##### Errors
 1. Not logged in: {'error': true }
 2. Not allowed to interact with the trade: {'error': true }
+
+#### Log out
+* https://superium.net/Login/Expire
 
 
 Avatar APIs
@@ -165,7 +168,64 @@ returns the same thing like get members but it's not users it's items
 > 
 > 
 
-#### 
-* https://superium.net
-> 
-> 
+Game APIs
+---------
+
+#### Join a game
+* https://superium.net/api/JoinBeta?id=[gameId]
+> gameId: a game id
+
+Item APIs
+---------
+
+#### Sell an Limited
+* https://superium.net/api/doSellLimited
+> serial: your serial id
+> itemid: limited id
+> price: chosen price in bricks (max 1000000000, min 1)
+
+##### Errors
+1. Logged-in user doesnt own the item, returns: err:inv
+
+#### Purchase an item
+* https://superium.net/api/PurchaseItem
+> id: item id
+> csrf: your csrf token
+
+##### Errors
+1. invalid assetId
+2. invalid item
+3. already own this item
+4. not logged in
+5. item is off-sale
+6. not having enough currency
+7. item has sold out
+
+#### Purcahse an limited (requires blim)
+* https://superium.net/api/PurchaseCollectible
+> id: blim
+> blim = var blim = [itemid];
+> csrf: your csrf token
+
+##### Errors
+1. invalid assetId
+2. invalid item
+3. already own this item
+4. not logged in
+5. item is off-sale
+6. not having enough currency
+7. selling this item
+
+#### Purcahse an limited with id
+* https://superium.net/api/PurchaseCollectible
+> id: item id
+> csrf: your csrf token
+
+##### Errors
+1. invalid assetId
+2. invalid item
+3. already own this item
+4. not logged in
+5. item is off-sale
+6. not having enough currency
+7. selling this item
