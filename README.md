@@ -12,7 +12,7 @@ Undocumented APIs
 * [Avatar APIs](#avatar-apis)
 * [Friendship APIs](#friendship-apis)
 * [Guild APIs](#guild-apis)
-* [Item APIs](#asset-apis)
+* [Item APIs](#item-apis)
 
 User APIs
 ---------
