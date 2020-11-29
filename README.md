@@ -30,6 +30,7 @@ User APIs
 #### Currency Conversion Calculator
 * https://superium.net/api/calculateconversion?input=[number]&c=[type]
 > input: an amount of bricks/studs
+
 > c: b, s (b means bricks) (s means studs)
 ```json
     returns a number
