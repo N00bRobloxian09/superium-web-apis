@@ -13,6 +13,7 @@ Undocumented APIs
 * [Friendship APIs](#friendship-apis)
 * [Guild APIs](#guild-apis)
 * [Item APIs](#item-apis)
+* [Auth APIs](#auth-apis)
 
 User APIs
 ---------
@@ -229,3 +230,36 @@ Item APIs
 5. item is off-sale
 6. not having enough currency
 7. selling this item
+
+Auth APIs
+---------
+
+#### Check if a name is taken
+* https://superium.net/api/NameAvailability?name=[name]
+> name: a chosen name lol?
+
+```json
+{"Error": false,"Message": "OK"}
+```
+
+##### Errors
+1. username must be at least 3 characters
+2. inappropriate username
+3. username contains special characters
+4. username is already taken! Try [name](random numbers like "XYZ237") instead
+
+#### Register a new account
+* https://superium.net/api/finishregistration
+> username: chosen username
+> password: chosen passowrd
+> confirmpassword: your chosen password
+> email: chosen email
+> referer: target userId (REFERER IS OPTIONAL), default 0
+
+```json
+unknown
+```
+
+##### Errors
+1. reCAPTCHA failed, please try again
+2. other errors are unknown, sadly
