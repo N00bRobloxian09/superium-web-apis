@@ -1,7 +1,7 @@
 # superium-web-apis (deprecated)
 
-superium is now polytoria
-[Polytoria Web APIs] (https://github.com/N00bRobloxian09/polytoria-web-apis/)
+superium is now polytoria, new apis VVVV<br />
+https://github.com/N00bRobloxian09/polytoria-web-apis/
 
 im sorry for my english, lol
 
