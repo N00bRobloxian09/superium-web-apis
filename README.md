@@ -1,4 +1,4 @@
-# superium-web-apis
+# superium-web-apis (deprecated)
 
 im sorry for my english, lol
 
